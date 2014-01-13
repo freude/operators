@@ -1,0 +1,48 @@
+classdef QuantumDot < handle
+    properties (SetAccess = private)
+        omega
+        omega0
+        omegaL
+        b
+        a
+        B
+        m=nconst.m0;
+    end
+    methods
+        function QD = QuantumDot(omega0,B)
+            if nargin > 0
+                if (length(omega0)==1)
+                    QD.omega0 = omega0;
+                    QD.omegaL=nconst.q*QD.B/(2*DQ.m*nconst.c);
+                    QD.B = B;
+                    QD.b = sqrt(1+(QD.omegaL^2)/(QD.omega0^2));
+                    QD.omega = QD.b*QD.omega0;
+                    QD.a = sqrt(nconst.h/(QD.m*QD.omega0));
+                else
+                    
+                    QD(1,length(omega0)) = QuantumDot; % Preallocate object array
+                    
+                    for j=1:length(omega0)
+                        QD(j).omega0 = omega0(j);
+                        QD(j).omegaL=nconst.q*QD(j).B/(2*QD(j).m*nconst.c);
+                        
+                        if (length(B)==1)
+                            QD(j).B = B;
+                        else
+                            QD(j).B = B(j);
+                        end;
+                        
+                        QD(j).b = sqrt(1+(QD(j).omegaL^2)/(QD(j).omega0^2));
+                        QD(j).omega = QD(j).b*QD(j).omega0;
+                        QD(j).a = sqrt(nconst.h/(QD(j).m*QD(j).omega0));
+                        
+                    end;
+                end;  
+            end;
+        end
+        function U = dot_cc(QD)
+            U=2.3;      %zaglushka
+        end
+        
+    end % methods
+end % classdef
