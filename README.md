@@ -15,7 +15,7 @@ operators applying a class constructor:
 a=OperatorFermion(1:5);
 
 The action of the anihilation opeator is designated by the matrix product "\*" and
-the action of the creation operator is desigated by th eproduct with dot ".\*".
+the action of the creation operator is desigated by the product with a dot ".\*".
 The orbital index of the operator should be placed in parenthesis:
 
 a(1).*[0 0 0 0 0];
