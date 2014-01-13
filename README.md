@@ -20,22 +20,22 @@ The orbital index of the operator should be placed in parenthesis:
 
 a(1).*[0 0 0 0 0];
 
-    ans=
-        1 0 0 0 0
+    >> ans=
+           1 0 0 0 0
 
 a(2).\*a(1).\*[0 0 0 0 0];
 
-    ans=
-        1 1 0 0 0
+    >> ans=
+           1 1 0 0 0
        
 a(1)\*a(2).\*a(1).*[0 0 0 0 0];
 
-    ans=
-        0 1 0 0 0       
+    >> ans=
+           0 1 0 0 0       
        
 a(1)\*a(1).\*a(2).*[0 0 0 0 0];
 
-    ans=
-        0 -1 0 0 0            
+    >> ans=
+           0 -1 0 0 0            
        
 The sign means phase factor following from the comutation rules for operators.
