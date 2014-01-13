@@ -18,22 +18,22 @@ The action of the anihilation opeator is designated by the matrix product "\*" a
 the action of the creation operator is desigated by the product with a dot ".\*".
 The orbital index of the operator should be placed in parenthesis:
 
-a(1).*[0 0 0 0 0];
+a(1).*[0 0 0 0 0]
 
     >> ans=
            1 0 0 0 0
 
-a(2).\*a(1).\*[0 0 0 0 0];
+a(2).\*a(1).\*[0 0 0 0 0]
 
     >> ans=
            1 1 0 0 0
        
-a(1)\*a(2).\*a(1).*[0 0 0 0 0];
+a(1)\*a(2).\*a(1).*[0 0 0 0 0]
 
     >> ans=
            0 1 0 0 0       
        
-a(1)\*a(1).\*a(2).*[0 0 0 0 0];
+a(1)\*a(1).\*a(2).*[0 0 0 0 0]
 
     >> ans=
            0 -1 0 0 0            
